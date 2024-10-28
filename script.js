@@ -56,7 +56,7 @@ const botarOsAudioNaPlaylist = (numeroDoAudio, qualEOTextoDoAudio) =>{
             playlist.push(`./assets/GoldilocksAndTheThreeBears/Goldilocks and the Three Bears Peter Audio Completo.mp3`)
 
         } else{
-            playlist.push(`./assets/GoldilocksAndTheThreeBears/AUDIO Goldilocks and the Three Bears ${numeroDoAudio} Peter.mp3`)
+            playlist.push(`./assets/GoldilocksAndTheThreeBears/AUDIO Goldilocks and the Three Bears 0${numeroDoAudio} Peter.mp3`)
         }
     } else if (qualEOTextoDoAudio === 'Antonio Canova'){
         if (numeroDoAudio === 'Complete Audio'){
