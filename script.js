@@ -265,7 +265,7 @@ function creatingTheListOfTheAudios(){
 
         }
         WhyCats.appendChild(textWhyCats)
-        listaDosAudios.appendChild(textWhyCats)
+        listaDosAudios.appendChild(WhyCats)
     }
     document.body.appendChild(listaDosAudios)
     document.body.appendChild(sairDeListaDosAudio)
