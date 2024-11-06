@@ -13,7 +13,6 @@ infinityRepticao.addEventListener('click', () =>{
     repticao = true;
 })
 
-
 var playlist = []
 const botarOsAudioNaPlaylist = (numeroDoAudio, qualEOTextoDoAudio) =>{
     if (qualEOTextoDoAudio === 'Jack Hannaford'){
@@ -65,11 +64,16 @@ const botarOsAudioNaPlaylist = (numeroDoAudio, qualEOTextoDoAudio) =>{
         } else{
             playlist.push(`./assets/AntonioCanova/AUDIO Antonio Canova ${numeroDoAudio} Peter.mp3`)
         }
-    }
+    } else if (qualEOTextoDoAudio === 'Why Cats and Dogs are Enemies'){
+        if (numeroDoAudio === 'Complete Audio'){
+            playlist.push(`./assets/WhyCatsAndDogsAreEnimies/Why Cats and Dogs are Enemies Peter Complete Audio.mp3`)
 
+        } else{
+            playlist.push(`./assets/WhyCatsAndDogsAreEnimies/AUDIO Why Cats and Dogs are Enemies ${numeroDoAudio} Peter.mp3`)
+        }
+    }
     console.log(playlist)
 }
-
 
 const takingOffTheListOfTheAudios = (somethingWhichIsGoingToLeave, somethingWhichIsGoingToapper) => {
     document.body.removeChild(somethingWhichIsGoingToLeave)
@@ -150,7 +154,6 @@ function creatingTheListOfTheAudios(){
         audioJack.appendChild(textAudioJack)
         listaDosAudios.appendChild(audioJack)
     }
-
     for (let i = 0; i < 8; i++){
         let audioTheEnd = document.createElement('div')
         audioTheEnd.classList.add('audio')
@@ -167,7 +170,6 @@ function creatingTheListOfTheAudios(){
         audioTheEnd.appendChild(textAudioTheEnd)
         listaDosAudios.appendChild(audioTheEnd)
     }
-
     for (let i = 0; i < 7; i++){
         let audioJackAnd = document.createElement('div')
         audioJackAnd.classList.add('audio')
@@ -184,7 +186,6 @@ function creatingTheListOfTheAudios(){
         audioJackAnd.appendChild(textAudioJackAnd)
         listaDosAudios.appendChild(audioJackAnd)
     }
-
     for (let i = 0; i < 8; i++){
         let audioTheBoy = document.createElement('div')
         audioTheBoy.classList.add('audio')
@@ -201,7 +202,6 @@ function creatingTheListOfTheAudios(){
         audioTheBoy.appendChild(textAudioTheBoy)
         listaDosAudios.appendChild(audioTheBoy)
     }
-
     for (let i = 0; i < 9; i++){
         let audioTheBell = document.createElement('div')
         audioTheBell.classList.add('audio')
@@ -250,6 +250,22 @@ function creatingTheListOfTheAudios(){
         }
         audioAntonio.appendChild(textAudioAntonio)
         listaDosAudios.appendChild(audioAntonio)
+    }
+    for (let i = 0; i < 9; i++){
+        let WhyCats = document.createElement('div')
+        WhyCats.classList.add('audio')
+        let textWhyCats = document.createElement('p')
+        textWhyCats.classList.add('audio-text')
+        if (i + 1 < 8){
+            WhyCats.addEventListener('click',  () =>botarOsAudioNaPlaylist(i+1, 'Why Cats and Dogs are Enemies') )
+            textWhyCats.textContent = `Why Cats and Dogs are Enemies ${i + 1}`
+        } else{
+            WhyCats.addEventListener('click',  () =>botarOsAudioNaPlaylist('Complete Audio', 'Why Cats and Dogs are Enemies') )
+            textWhyCats.textContent = `Why Cats and Dogs are Enemies COMPLETO`
+
+        }
+        WhyCats.appendChild(textWhyCats)
+        listaDosAudios.appendChild(audioGoldi)
     }
     document.body.appendChild(listaDosAudios)
     document.body.appendChild(sairDeListaDosAudio)
