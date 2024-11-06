@@ -69,7 +69,7 @@ const botarOsAudioNaPlaylist = (numeroDoAudio, qualEOTextoDoAudio) =>{
             playlist.push(`./assets/WhyCatsAndDogsAreEnimies/Why Cats and Dogs are Enemies Peter Complete Audio.mp3`)
 
         } else{
-            playlist.push(`./assets/WhyCatsAndDogsAreEnimies/AUDIO Why Cats and Dogs are Enemies ${numeroDoAudio} Peter.mp3`)
+            playlist.push(`./assets/WhyCatsAndDogsAreEnimies/AUDIO Why Cats and Dogs are Enemies 0${numeroDoAudio} Peter.mp3`)
         }
     }
     console.log(playlist)
