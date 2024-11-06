@@ -256,7 +256,7 @@ function creatingTheListOfTheAudios(){
         WhyCats.classList.add('audio')
         let textWhyCats = document.createElement('p')
         textWhyCats.classList.add('audio-text')
-        if (i + 1 < 8){
+        if (i + 1 < 9){
             WhyCats.addEventListener('click',  () =>botarOsAudioNaPlaylist(i+1, 'Why Cats and Dogs are Enemies') )
             textWhyCats.textContent = `Why Cats and Dogs are Enemies ${i + 1}`
         } else{
